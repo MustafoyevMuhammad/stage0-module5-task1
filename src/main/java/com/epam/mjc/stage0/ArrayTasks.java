@@ -141,7 +141,7 @@ public class ArrayTasks {
         return arr;
     }
 
-    public int[] sort(int[] arr) {
+    public void sort(int[] arr) {
         int temp = 0;
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
@@ -152,7 +152,7 @@ public class ArrayTasks {
                 }
             }
         }
-        return arr;
+       
     }
     
 }

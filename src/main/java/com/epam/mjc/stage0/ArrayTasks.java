@@ -127,21 +127,28 @@ public class ArrayTasks {
         int[] temp = new int[row];
         for (int i = 0; i < row; i++) {
             for (int j = i + 1; j < row; j++) {
-                if(arr[i].length > arr[j].length){
+                if (arr[i].length > arr[j].length) {
                     temp = arr[i];
                     arr[i] = arr[j];
-                    arr[j] =temp;
+                    arr[j] = temp;
                 }
             }
-        }int temp2 = 0;
+        }
+        int temp2 = 0;
         for (int i = 0; i < row; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                for (int k = j + 1; k < arr[i].length; k++) {
-                    if(arr[i][j] > arr[i][k]){
-                        temp2 = arr[i][j];
-                        arr[i][j] = arr[i][k];
-                        arr[i][k] = temp2;
-                    }
+            sort(arr[i]);
+        }
+        return arr;
+    }
+
+    public int[] sort(int[] arr) {
+        int temp = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
                 }
             }
         }
